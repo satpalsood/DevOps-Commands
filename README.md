@@ -269,6 +269,10 @@ Append the following content:
     metrics_path: '/prometheus'
     static_configs:
       - targets: ['<your-jenkins-ip>:<your-jenkins-port>']
+  - job_name: 'k8s'
+    metrics_path: '/metrics'
+    static_configs:
+      - targets: ['nodeIP:9100']
 ```
 
 Validate configuration:
